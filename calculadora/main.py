@@ -29,13 +29,13 @@ def click(event):
     global evento
     evento = evento + str(event)
     # resultado = eval(evento)
-    valor_texto.set(evento)
+    valor_texto.set(evento) 
 
 #calculos
 
 def calc():
     global evento #tornar essa variável global nesta função, fará com que essa alteração passe para todas as outras funções/locais do código
-    resultado = eval(evento)
+    resultado = eval(evento) #A função Eval avalia o expressão de cadeia de caracteres e retorna seu valor. Por exemplo, Eval("1 + 1") retorna 2.
     valor_texto.set(resultado)
 
 #limpar tela
@@ -91,6 +91,8 @@ b14.place(x=118, y=156)
 b15 = Button(frame_corpo, command = lambda: click('+'), text="+", width=5, height=2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE, bg=laranja, fg=branco)
 b15.place(x=177, y=156)
 
+#quinta linha
+
 b16 = Button(frame_corpo, command = lambda: click('0'), text="0", width=11, height=2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b16.place(x=0, y=208)
 b17 = Button(frame_corpo, command = lambda: click('.'), text=".", width=5, height=2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
@@ -98,4 +100,4 @@ b17.place(x=118, y=208)
 b18 = Button(frame_corpo, command = calc, text="=", width=5, height=2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE, bg=laranja, fg=branco)
 b18.place(x=177, y=208)
 
-janela.mainloop()
+janela.mainloop() #executa a visualização gráfica
